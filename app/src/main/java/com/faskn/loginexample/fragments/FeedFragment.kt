@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 
 import com.faskn.loginexample.R
@@ -24,7 +25,15 @@ class FeedFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_feed.setOnClickListener { view ->
-            view.findNavController().navigate(R.id.action_feedFragment_to_splashFragment)
+            navigate(R.id.action_feedFragment_to_splashFragment)
+        }
+    }
+
+    private fun navigate(action: Int) {
+
+        view?.let { _view ->
+
+            Navigation.findNavController(_view).navigate(action)
         }
     }
 }

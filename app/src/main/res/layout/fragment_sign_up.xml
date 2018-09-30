@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bluebackground"
-    tools:context=".fragments.LoginFragment">
+    android:background="@mipmap/orngbackground"
+    tools:context=".fragments.SignupFragment">
 
     <ImageView
         android:id="@+id/logo"
@@ -20,7 +20,6 @@
         android:layout_below="@id/logo"
         android:layout_centerInParent="true" />
 
-
     <include
         android:id="@+id/container_password"
         layout="@layout/password_login_container"
@@ -30,35 +29,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 
-
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/chck_remember"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:text="Login"
-        android:textColor="@android:color/black" />
-    <CheckBox
-        android:id="@+id/chck_remember"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/container_password"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="16dp"
-        android:text="Remember me" />
-
-    <Button
-        android:id="@+id/btn_registernow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_margin="5dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Register now"
+        android:text="@string/register"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

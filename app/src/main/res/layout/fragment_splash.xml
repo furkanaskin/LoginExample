@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SplashFragment">
+    tools:context=".fragments.SplashFragment"
+    android:background="@mipmap/bluebackground">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txtSplash"
+
+    <ImageView
+        android:id="@+id/img_JrLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/jrsaydam"/>
+    <ProgressBar
+        android:paddingTop="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Splash Screen"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
-    <Button
-        android:id="@+id/btn_splash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Take me inside"
-        android:layout_below="@id/txtSplash"
-        android:layout_centerHorizontal="true"/>
-
 </RelativeLayout>

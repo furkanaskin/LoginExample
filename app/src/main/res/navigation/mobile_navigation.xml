@@ -23,16 +23,19 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/SignupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/signInFragment"
-        android:name="com.faskn.loginexample.fragments.SignInFragment"
-        android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        android:id="@+id/SignupFragment"
+        android:name="com.faskn.loginexample.fragments.SignupFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signInFragment_to_feedFragment"
+            android:id="@+id/action_signupFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
     </fragment>
     <fragment
