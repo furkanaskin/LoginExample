@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "597612786239",
+    "firebase_url": "https://fir-login-3a167.firebaseio.com",
+    "project_id": "fir-login-3a167",
+    "storage_bucket": "fir-login-3a167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597612786239:android:457a4ed2749cccb5",
+        "android_client_info": {
+          "package_name": "com.faskn.loginexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597612786239-lvhb9b8fq1ffjih8228gm4flf5hj54j2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXSmk4Zzhd-osR70YwsW8hXo52F4SgIX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
