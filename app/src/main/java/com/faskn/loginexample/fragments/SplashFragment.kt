@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-
 import com.faskn.loginexample.R
 import com.faskn.loginexample.base.BaseFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -29,10 +27,6 @@ class SplashFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        firebaseAuth.currentUser?.let {
-
-            return
-        }
 
         object : CountDownTimer(3000, 1000) {
             override fun onFinish() {
@@ -49,13 +43,14 @@ class SplashFragment : BaseFragment() {
     override fun onStart() {
         super.onStart()
 
+        // Check current user available
+
         if(firebaseAuth.currentUser!=null){
             navigate(R.id.action_splashFragment_to_feedFragment)
             Toast.makeText(this.context,"You have successfully logged in.",Toast.LENGTH_SHORT).show()
         }else{
-            navigate(R.id.action_splashFragment_to_loginFragment)
-        }
 
+        }
     }
 
     private fun navigate(action: Int) {

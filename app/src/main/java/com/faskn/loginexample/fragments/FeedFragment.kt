@@ -6,15 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-
 import com.faskn.loginexample.R
 import com.faskn.loginexample.base.BaseFragment
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_feed.*
-import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class FeedFragment : BaseFragment() {
+
+    private val firebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -25,6 +25,10 @@ class FeedFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_feed.setOnClickListener { view ->
+            navigate(R.id.action_feedFragment_to_splashFragment)
+        }
+        btn_signout.setOnClickListener { view ->
+            firebaseAuth.signOut()
             navigate(R.id.action_feedFragment_to_splashFragment)
         }
     }

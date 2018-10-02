@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_loginFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetpasswordFragment"
+            app:destination="@id/resetpasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/SignupFragment"
@@ -46,5 +49,14 @@
         <action
             android:id="@+id/action_feedFragment_to_splashFragment"
             app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetpasswordFragment"
+        android:name="com.faskn.loginexample.fragments.ResetpasswordFragment"
+        android:label="fragment_resetpassword"
+        tools:layout="@layout/fragment_resetpassword">
+        <action
+            android:id="@+id/action_resetpasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

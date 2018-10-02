@@ -33,28 +33,47 @@ class LoginFragment : BaseFragment() {
 
         btn_login.setOnClickListener { _ ->
 
-            firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword)
-                    .addOnCompleteListener {
+            if (userEmail.isNullOrEmpty() || userPassword.isEmpty()) {
+                Toast.makeText(this.context, "Mail address or password cannot be empty.", Toast.LENGTH_SHORT).show()
+            } else {
 
-                        if (it.isSuccessful) {
 
-                            navigate(R.id.action_loginFragment_to_feedFragment)
-                        }else{
-                            val builder = AlertDialog.Builder(this.context)
-                            builder.setTitle("Exception")
-                            builder.setMessage("Check your mail or password.")
+                // Firebase auth Sign in function
 
-                            builder.setPositiveButton("OK"){_,_ ->}
-                            builder.setNeutralButton("Cancel"){_,_ ->
-                                Toast.makeText(this.context,"You cancelled the dialog.",Toast.LENGTH_SHORT).show()
+                firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword)
+                        .addOnCompleteListener {
+
+                            if (it.isSuccessful) {
+
+                                navigate(R.id.action_loginFragment_to_feedFragment)
+                                Toast.makeText(this.context, "Welcome :)", Toast.LENGTH_SHORT).show()
+                            } else {
+                                val builder = AlertDialog.Builder(this.context)
+                                builder.setTitle("Oops.. Something went wrong.")
+                                builder.setMessage("Check your mail or password, if you're not registered yet please register below.")
+
+                                builder.setPositiveButton("OK") { _, _ -> }
+                                builder.setNeutralButton("Cancel") { _, _ ->
+                                    Toast.makeText(this.context, "You cancelled the dialog.", Toast.LENGTH_SHORT).show()
+                                }
+                                val dialog: AlertDialog = builder.create()
+                                dialog.show()
                             }
-                            val dialog: AlertDialog = builder.create()
-                            dialog.show()
                         }
-                    }
+            }
         }
+
+        // Switch to register page
+
         btn_registernow.setOnClickListener { view ->
             navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
+
+
+        // Switch to reset password page
+
+        txt_forgot.setOnClickListener { view ->
+            navigate(R.id.action_loginFragment_to_resetpasswordFragment)
         }
     }
 

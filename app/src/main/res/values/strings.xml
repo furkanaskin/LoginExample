@@ -3,7 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="e_mail_adress">E-Mail Adress</string>
+    <string name="e_mail_adress">E-Mail Address</string>
     <string name="password">Password</string>
-    <string name="register">Register</string>
+    <string name="register">REGISTER</string>
+    <string name="welcome_to_feed">Welcome to Feed</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="go_to_splash_screen">Go to splash screen</string>
+    <string name="register_with_google">REGISTER WITH GOOGLE</string>
+    <string name="your_mail_address">Your mail address</string>
+    <string name="reset_my_password">Reset my password</string>
+    <string name="when_you_clicked_the_reset_my_password_a_mail_will_send_your_mail_address_it_can_take_3_4_mins_or_less_please_check_your_inbox">When you clicked the Reset my password a mail will send your mail address.It can take 3-4 mins or less. Please check your inbox</string>
+    <string name="go_to_login_screen">Go to Login Screen</string>
+    <string name="forgot_your_password">Forgot your password?</string>
 </resources>

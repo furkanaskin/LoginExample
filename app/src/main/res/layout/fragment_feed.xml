@@ -10,16 +10,29 @@
         android:id="@+id/txtFeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Feed"
+        android:text="@string/welcome_to_feed"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
     <Button
+        android:layout_marginTop="30dp"
         android:id="@+id/btn_feed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Splash Screen"
+        android:text="@string/go_to_splash_screen"
         android:layout_below="@id/txtFeed"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_out"
+        android:layout_below="@id/btn_feed"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white" />
 
 
 </RelativeLayout>
